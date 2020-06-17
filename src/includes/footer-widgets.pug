@@ -1,0 +1,42 @@
+mixin buildFooterLink(name)
+    a(href="#").link-element.footer-link-element=name
+
+
+footer
+    .footer-block
+        .footer-widgets.brand-block
+            .logo.footer-widgets-logo
+                img(src="../src/img/Group.svg", alt="" id="logo-brand-icon")
+                img(src="../src/img/TOXIN.svg", alt="" id="logo-brand-name")
+            .text.footer-widgets-description
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        .footer-widgets.navigation-block
+            p.footer-head-block.footer-link-element Navigation
+            +buildFooterLink('About Us')
+            +buildFooterLink('News')
+            +buildFooterLink('Support')
+            +buildFooterLink('Products')
+        .footer-widgets.about-us-block
+            p.footer-head-block.footer-link-element About Us
+            +buildFooterLink('Who we are')
+            +buildFooterLink('Our team')
+            +buildFooterLink('Careers')
+            +buildFooterLink('Investors')
+        .footer-widgets.support-block
+            p.footer-head-block.footer-link-element Support
+            +buildFooterLink('Documentation')
+            +buildFooterLink('Community')
+            +buildFooterLink('Get in touch')
+        .footer-widgets.subscribe-block
+            .footer-subscribe-block-description    
+                p.footer-head-block.footer-link-element Subscribe to our newsletter
+                p.footer-subscribe-block-info Receive our latest news and promotions in your inbox.
+            .footer-subscribe-block-send
+                input(type="text" placeholder="Your email address").footer-subscribe-block-input
+.copyright-block
+    .copyright-container    
+        p.copyright-text Copyright © 2018 Toxin UI Kit. All rights reserved.
+        .copyright-contact-bar
+            .contact.twitter
+            .contact.facebook
+            .contact.instagram

@@ -1,0 +1,19 @@
+mixin createMenuElement(value)
+    li
+        a(href="#" class="header-menu-element link-element")=value
+header
+    .header-container
+        .logo
+            img(src="../src/img/Group.svg", alt="" id="logo-brand-icon")
+            img(src="../src/img/TOXIN.svg", alt="" id="logo-brand-name")
+        nav
+            ul
+                li
+                    a(href="#" class="link-element header-menu-element main-button") Home
+                +createMenuElement('About us')
+                +createMenuElement('Services')
+                +createMenuElement('Careers')
+                +createMenuElement('News')
+                +createMenuElement('Documentation')
+                input(type="button" value="Login" class="header-button login")
+                input(type="button" value="Register" class="header-button register")
